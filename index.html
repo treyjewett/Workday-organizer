@@ -30,49 +30,49 @@
     </header>
     <div class="container">
       <!-- Set the rows of each business hour for the user to populate with tasks. -->
-      <div class="row" id="9am">
+      <div class="row" id="9">
         <div class="col-sm-1 hour">9AM</div>
-        <input class="col-md-10 task-input" type="text" placeholder="Input Tasks Here"></input>
+        <input class="col-md-10 taskInput" type="text" placeholder="Input Tasks Here"></input>
         <button class="col-sm-1 btn" id="button1" type="submit">Save</button>
       </div>
-      <div class="row" id="10am">
+      <div class="row" id="10">
         <div class="col-sm-1 hour">10AM</div>
-        <input class="col-md-10 task-input" type="text" placeholder="Input Tasks Here"></input>
+        <input class="col-md-10 taskInput" type="text" placeholder="Input Tasks Here"></input>
         <button class="col-sm-1 btn" id="button2" type="submit">Save</button>
       </div>
-      <div class="row" id="11am">
+      <div class="row" id="11">
         <div class="col-sm-1 hour">11AM</div>
-        <input class="col-md-10 task-input" type="text" placeholder="Input Tasks Here"></input>
+        <input class="col-md-10 taskInput" type="text" placeholder="Input Tasks Here"></input>
         <button class="col-sm-1 btn" id="button3" type="submit">Save</button>
       </div>
-      <div class="row" id="12pm">
+      <div class="row" id="12">
         <div class="col-sm-1 hour">12PM</div>
-        <input class="col-md-10 task-input" type="text" placeholder="Input Tasks Here"></input>
+        <input class="col-md-10 taskInput" type="text" placeholder="Input Tasks Here"></input>
         <button class="col-sm-1 btn" id="button4" type="submit">Save</button>
       </div>
-      <div class="row" id="1pm">
+      <div class="row" id="13">
         <div class="col-sm-1 hour">1PM</div>
-        <input class="col-md-10 task-input" type="text" placeholder="Input Tasks Here"></input>
+        <input class="col-md-10 taskInput" type="text" placeholder="Input Tasks Here"></input>
         <button class="col-sm-1 btn" id="button5" type="submit">Save</button>
       </div>
-      <div class="row" id="2pm">
+      <div class="row" id="14">
         <div class="col-sm-1 hour">2PM</div>
-        <input class="col-md-10 task-input" type="text" placeholder="Input Tasks Here"></input>
+        <input class="col-md-10 taskInput" type="text" placeholder="Input Tasks Here"></input>
         <button class="col-sm-1 btn" id="button6" type="submit">Save</button>
       </div>
-      <div class="row" id="3pm">
+      <div class="row" id="15">
         <div class="col-sm-1 hour">3PM</div>
-        <input class="col-md-10 task-input" type="text" placeholder="Input Tasks Here"></input>
+        <input class="col-md-10 taskInput" type="text" placeholder="Input Tasks Here"></input>
         <button class="col-sm-1 btn" id="button7" type="submit">Save</button>
       </div>
-      <div class="row" id="4pm">
+      <div class="row" id="16">
         <div class="col-sm-1 hour">4PM</div>
-        <input class="col-md-10 task-input" type="text" placeholder="Input Tasks Here"></input>
+        <input class="col-md-10 taskInput" type="text" placeholder="Input Tasks Here"></input>
         <button class="col-sm-1 btn" id="button8" type="submit">Save</button>
       </div>
-      <div class="row" id="5pm">
+      <div class="row" id="17">
         <div class="col-sm-1 hour">5PM</div>
-        <input class="col-md-10 task-input" type="text" placeholder="Input Tasks Here"></input>
+        <input class="col-md-10 taskInput" type="text" placeholder="Input Tasks Here"></input>
         <button class="col-sm-1 btn" id="button9" type="submit">Save</button>
       </div>
     </div>
@@ -81,6 +81,34 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script type="text/javascript">
 
+      // Use moment.js to retrieve current date and time. Store in two seperate variables as they will be used in different areas.
+      var date = moment().format('MMMM Do YYYY');
+      var currentTime = parseInt(moment().format('H'));
+      console.log(currentTime);
+      var taskInput = $(".taskInput");
+
+      // Append the current day below the header.
+      $("#currentDay").text(date);
+
+      // Create the function to change the color of time blocks throughout the day.
+      taskInput.each(function() {
+        // create variables to access each of the hour blocks so we can compare with real time.
+        var hourCont = $(this).parent(".row");
+        var hour = parseInt(hourCont.attr('id'));
+
+        // Checks to see if the current time is greater than the time block listed.
+        if (hour < currentTime) {
+          $(this).addClass('past');
+          // Checks to see if the current time is the same as the time block listed.
+        } else if (hour === currentTime) {
+            $(this).removeClass('past');
+            $(this).addClass('present');
+          } else {
+            $(this).removeClass('past');
+            $(this).removeClass('present');
+            $(this).addClass('future');
+          }
+        });
     
     </script>
   </body>
