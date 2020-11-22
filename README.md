@@ -13,7 +13,7 @@ Every employee needs a way to manage their tasks throughout the day. This is a v
     <img src="Assets\images\Screenshot2.png" alt="Organizer Screenshot 2">
 </div>
 
-<a href="" target="_blank">Click here to view the Organizer!</a>
+<a href="https://treyjewett.github.io/Workday-organizer/" target="_blank">Click here to view the Organizer!</a>
 
 ## Code Utilized
 
