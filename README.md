@@ -8,7 +8,7 @@ Every employee needs a way to manage their tasks throughout the day. This is a v
 ## The Organizer Page
 
 <div align="center">
-    <img src="Assets\images\Screenshot1.png>" alt="Organizer Screenshot">
+    <img src="Assets\images\Screenshot1.png" alt="Organizer Screenshot">
     <p>-----------------------------------------------------------------------</p>
     <img src="Assets\images\Screenshot2.png" alt="Organizer Screenshot 2">
 </div>
