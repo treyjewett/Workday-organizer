@@ -1,119 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="Assets/css/style.css" />
-    <title>Work Day Scheduler</title>
-  </head>
 
-  <body>
-    <header class="jumbotron">
-      <h1 class="display-3">Work Day Scheduler</h1>
-      <p class="lead">A simple calendar app for scheduling your work day</p>
-      <p id="currentDay" class="lead"></p>
-    </header>
-    <div class="container">
-      <!-- Set the rows of each business hour for the user to populate with tasks. -->
-      <div class="row" id="9">
-        <div class="col-sm-1 hour">9AM</div>
-        <input class="col-md-10 taskInput" type="text" placeholder="Input Tasks Here"></input>
-        <button class="col-sm-1 btn" id="button1" type="submit">Save</button>
-      </div>
-      <div class="row" id="10">
-        <div class="col-sm-1 hour">10AM</div>
-        <input class="col-md-10 taskInput" type="text" placeholder="Input Tasks Here"></input>
-        <button class="col-sm-1 btn" id="button2" type="submit">Save</button>
-      </div>
-      <div class="row" id="11">
-        <div class="col-sm-1 hour">11AM</div>
-        <input class="col-md-10 taskInput" type="text" placeholder="Input Tasks Here"></input>
-        <button class="col-sm-1 btn" id="button3" type="submit">Save</button>
-      </div>
-      <div class="row" id="12">
-        <div class="col-sm-1 hour">12PM</div>
-        <input class="col-md-10 taskInput" type="text" placeholder="Input Tasks Here"></input>
-        <button class="col-sm-1 btn" id="button4" type="submit">Save</button>
-      </div>
-      <div class="row" id="13">
-        <div class="col-sm-1 hour">1PM</div>
-        <input class="col-md-10 taskInput" type="text" placeholder="Input Tasks Here"></input>
-        <button class="col-sm-1 btn" id="button5" type="submit">Save</button>
-      </div>
-      <div class="row" id="14">
-        <div class="col-sm-1 hour">2PM</div>
-        <input class="col-md-10 taskInput" type="text" placeholder="Input Tasks Here"></input>
-        <button class="col-sm-1 btn" id="button6" type="submit">Save</button>
-      </div>
-      <div class="row" id="15">
-        <div class="col-sm-1 hour">3PM</div>
-        <input class="col-md-10 taskInput" type="text" placeholder="Input Tasks Here"></input>
-        <button class="col-sm-1 btn" id="button7" type="submit">Save</button>
-      </div>
-      <div class="row" id="16">
-        <div class="col-sm-1 hour">4PM</div>
-        <input class="col-md-10 taskInput" type="text" placeholder="Input Tasks Here"></input>
-        <button class="col-sm-1 btn" id="button8" type="submit">Save</button>
-      </div>
-      <div class="row" id="17">
-        <div class="col-sm-1 hour">5PM</div>
-        <input class="col-md-10 taskInput" type="text" placeholder="Input Tasks Here"></input>
-        <button class="col-sm-1 btn" id="button9" type="submit">Save</button>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="Assets/css/style.css" />
+  <title>Work Day Scheduler</title>
+</head>
+
+<body>
+  <header class="jumbotron">
+    <h1 class="display-3">Work Day Scheduler</h1>
+    <p class="lead">A simple calendar app for scheduling your work day</p>
+    <p id="currentDay" class="lead"></p>
+  </header>
+  <div class="container">
+    <!-- Set the rows of each business hour for the user to populate with tasks. -->
+    <div class="row" id="9">
+      <div class="col-sm-1 hour">9AM</div>
+      <input class="col-md-10 taskInput" id="9" type="text" placeholder="Input Tasks Here"></input>
+      <button class="col-sm-1 btn" type="submit">Save</button>
     </div>
+    <div class="row" id="10">
+      <div class="col-sm-1 hour">10AM</div>
+      <input class="col-md-10 taskInput" id="10" type="text" placeholder="Input Tasks Here"></input>
+      <button class="col-sm-1 btn" type="submit">Save</button>
+    </div>
+    <div class="row" id="11">
+      <div class="col-sm-1 hour">11AM</div>
+      <input class="col-md-10 taskInput" id="11" type="text" placeholder="Input Tasks Here"></input>
+      <button class="col-sm-1 btn" type="submit">Save</button>
+    </div>
+    <div class="row" id="12">
+      <div class="col-sm-1 hour">12PM</div>
+      <input class="col-md-10 taskInput" id="12" type="text" placeholder="Input Tasks Here"></input>
+      <button class="col-sm-1 btn" type="submit">Save</button>
+    </div>
+    <div class="row" id="13">
+      <div class="col-sm-1 hour">1PM</div>
+      <input class="col-md-10 taskInput" id="13" type="text" placeholder="Input Tasks Here"></input>
+      <button class="col-sm-1 btn" type="submit">Save</button>
+    </div>
+    <div class="row" id="14">
+      <div class="col-sm-1 hour">2PM</div>
+      <input class="col-md-10 taskInput" id="14" type="text" placeholder="Input Tasks Here"></input>
+      <button class="col-sm-1 btn" type="submit">Save</button>
+    </div>
+    <div class="row" id="15">
+      <div class="col-sm-1 hour">3PM</div>
+      <input class="col-md-10 taskInput" id="15" type="text" placeholder="Input Tasks Here"></input>
+      <button class="col-sm-1 btn" type="submit">Save</button>
+    </div>
+    <div class="row" id="16">
+      <div class="col-sm-1 hour">4PM</div>
+      <input class="col-md-10 taskInput" id="16" type="text" placeholder="Input Tasks Here"></input>
+      <button class="col-sm-1 btn" type="submit">Save</button>
+    </div>
+    <div class="row" id="17">
+      <div class="col-sm-1 hour">5PM</div>
+      <input class="col-md-10 taskInput" id="17" type="text" placeholder="Input Tasks Here"></input>
+      <button class="col-sm-1 btn" type="submit">Save</button>
+    </div>
+  </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script type="text/javascript">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script type="text/javascript">
 
-      // Use moment.js to retrieve current date and time. Store in two seperate variables as they will be used in different areas.
-      var date = moment().format('dddd, MMMM Do, YYYY');
-      var currentTime = parseInt(moment().format('H'));
-      var taskInput = $(".taskInput");
+    // Use moment.js to retrieve current date and time. Store in two seperate variables as they will be used in different areas.
+    var date = moment().format('dddd, MMMM Do, YYYY');
+    var currentTime = parseInt(moment().format('H'));
+    var taskInput = $(".taskInput");
 
-      // Append the current day below the header.
-      $("#currentDay").text(date);
+    // Append the current day below the header.
+    $("#currentDay").text(date);
 
-      // Create the function to change the color of time blocks throughout the day.
-      taskInput.each(function() {
-        // create variables to access each of the hour blocks so we can compare with real time.
-        var hourCont = $(this).parent('.row');
-        var hour = parseInt(hourCont.attr('id'));
+    // Create the function to change the color of time blocks throughout the day.
+    taskInput.each(function () {
+      // create variables to access each of the hour blocks so we can compare with real time.
+      var hourCont = $(this).parent('.row');
+      var hour = parseInt(hourCont.attr('id'));
 
-        // Checks to see if the current time is greater than the time block listed.
-        if (hour < currentTime) {
-          $(this).addClass('past');
-          // Checks to see if the current time is the same as the time block listed.
-        } else if (hour === currentTime) {
-            $(this).removeClass('past');
-            $(this).addClass('present');
-          } else {
-            $(this).removeClass('past');
-            $(this).removeClass('present');
-            $(this).addClass('future');
-          }
-        });
+      // Checks to see if the current time is greater than the time block listed.
+      if (hour < currentTime) {
+        $(this).addClass('past');
+        // Checks to see if the current time is the same as the time block listed.
+      } else if (hour === currentTime) {
+        $(this).removeClass('past');
+        $(this).addClass('present');
+      } else {
+        $(this).removeClass('past');
+        $(this).removeClass('present');
+        $(this).addClass('future');
+      }
+    });
 
-      // Create an event listener for when the user clicks the save button.
-      $('.saveBtn').on('click', function (){
-        
-      })
-    
-    </script>
-  </body>
+    // Create an array to reference different hour blocks to iterate user tasks if the page refreshes.
+    var hourBlocks = ['9', '10', '11', '12', '13', '14', '15', '16', '17'];
+
+    // Create an array accessible to local storage and hold the user tasks.
+    var taskArray = JSON.parse(localStorage.getItem('taskArray')) || {};
+
+    // Create an event listener for when the user clicks the save button.
+    $('.btn').on('click', function () {
+      var task = $(this).prev().val();
+      var taskId = $(this).prev().attr('id');
+      // Set the task to taskArray at index teskId.
+      // This will ensure the tasks that get saved will remain when the page is reloaded.
+      taskArray[taskId] = task;
+      localStorage.setItem('taskArray', JSON.stringify(taskArray));
+    })
+
+    // Create a for loop to populate the tasks the user has saved if the page is refreshed.
+    for (i = 0; i < hourBlocks.length; i++) {
+      if (taskArray[hourBlocks[i]] != null) {
+        taskInput[i].value = taskArray[hourBlocks[i]];
+      } else {
+        taskInput[i].value = "";
+      }
+    }
+  </script>
+</body>
 </html>
