@@ -82,9 +82,8 @@
     <script type="text/javascript">
 
       // Use moment.js to retrieve current date and time. Store in two seperate variables as they will be used in different areas.
-      var date = moment().format('MMMM Do YYYY');
+      var date = moment().format('dddd, MMMM Do, YYYY');
       var currentTime = parseInt(moment().format('H'));
-      console.log(currentTime);
       var taskInput = $(".taskInput");
 
       // Append the current day below the header.
@@ -93,7 +92,7 @@
       // Create the function to change the color of time blocks throughout the day.
       taskInput.each(function() {
         // create variables to access each of the hour blocks so we can compare with real time.
-        var hourCont = $(this).parent(".row");
+        var hourCont = $(this).parent('.row');
         var hour = parseInt(hourCont.attr('id'));
 
         // Checks to see if the current time is greater than the time block listed.
@@ -109,6 +108,11 @@
             $(this).addClass('future');
           }
         });
+
+      // Create an event listener for when the user clicks the save button.
+      $('.saveBtn').on('click', function (){
+        
+      })
     
     </script>
   </body>
